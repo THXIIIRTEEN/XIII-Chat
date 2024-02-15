@@ -31,25 +31,17 @@ export default function Chat() {
             time: currentTime
         } 
 
-
-
         fetch("https://thxiii-messages.glitch.me/messages", {
             method: "POST",
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify(message) 
         })
         
-        var scrollInterval = setInterval(function() { 
-            document.documentElement.scrollTop = document.documentElement.scrollHeight;
-        }, 50);
-
         document.getElementById("chat_input").value = ""
-
-        
     }
 
     return (
-        <div className={Styles["chat_body"]}>
+        <div id="chat_body" className={Styles["chat_body"]}>
             <div className={Styles["chat_container"]}>
                 <div id="messages_container" className="messages_container">
                 <ul>
