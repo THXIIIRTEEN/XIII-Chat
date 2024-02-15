@@ -41,6 +41,7 @@ export default function Chat() {
       
 
         document.getElementById("chat_input").value = ""
+        window.scrollTo(0, document.body.scrollHeight);
     }
 
     return (
