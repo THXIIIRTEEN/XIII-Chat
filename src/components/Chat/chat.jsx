@@ -38,10 +38,14 @@ export default function Chat() {
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify(message) 
         })
-      
+        
+        var scrollInterval = setInterval(function() { 
+            document.documentElement.scrollTop = document.documentElement.scrollHeight;
+        }, 50);
 
         document.getElementById("chat_input").value = ""
-        window.scrollTo(0, document.body.scrollHeight);
+
+        
     }
 
     return (
