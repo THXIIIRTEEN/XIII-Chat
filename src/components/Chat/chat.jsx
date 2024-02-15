@@ -9,7 +9,7 @@ export default function Chat() {
 
     const [messageArray, setMessageArray] = useState([])
 
-    fetch('https://calico-warp-feta.glitch.me/messages')
+    fetch('https://conscious-childish-fog.glitch.me/messages')
         .then((response) => {
           return response.json();
         })
@@ -32,7 +32,7 @@ export default function Chat() {
             time: currentTime
         } 
 
-        fetch("https://calico-warp-feta.glitch.me/messages", {
+        fetch("https://conscious-childish-fog.glitch.me/messages", {
             method: "POST",
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify(message) 
