@@ -1,0 +1,90 @@
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus
+input:-webkit-autofill, 
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border:none !important;
+  -webkit-text-fill-color: #9E9EA2 !important;
+  -webkit-box-shadow: 0 0 0px 1000px #1A1C26 inset;
+  transition: background-color 5000s ease-in-out 0s;
+  font-size: 15px;
+  font-weight: 400;
+  margin: 0%;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+:root {
+  --main-accent-color: #8C67F6;
+  --text-color: #9E9EA2;
+  --block-bg-color: rgba(39, 41, 50, 1);
+}
+
+.registration_block {
+  width: 670px;
+  height: 100vh;
+  background-color: #272932;
+  padding: 3% 5%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: first baseline;
+}
+
+.chooseButton_block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin-top: 8%;
+}
+
+div:has(.MessageIcon)::before {
+  background: url(/src/img/MessageIcon.svg);
+} 
+
+div:has(.UnlockIcon)::before {
+  background: url(/src/img/Unlock.svg);
+} 
+
+.white {
+  color: white;
+}
+
+.light-grey {
+  color: #D4D4D6;
+}
+
+.hello {
+  font-size: 100px;
+}
+
+.body-registration {
+  margin: 0%;
+  background: url(../src/img/registrationBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+body {
+  margin: 0%;
+}

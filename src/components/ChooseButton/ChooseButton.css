@@ -1,0 +1,22 @@
+.chooseButton {
+    color: #67696F;
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    border-bottom: solid 5px #67696F;
+    width: 50%;
+    height: 70px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.chooseButton:hover {
+    color: #AAA;
+    border-bottom: solid 5px #AAA;
+}
+
+.chooseButton__active {
+    color: #8C67F6 !important;
+    border-color: #8C67F6 !important;
+}

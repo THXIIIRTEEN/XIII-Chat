@@ -1,0 +1,41 @@
+.input_background {
+    background: none;
+    border: none;
+    background-color: #1A1C26;
+    border-radius: 15px;
+    width: 100%;
+    padding: 3% 8%;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+input {
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+    color: #8F8F8F;
+}
+
+::placeholder {
+    color: #8F8F8F;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.input_background::before {
+    position: absolute;
+    content: "";
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    width: 18px;
+    height: 18px;
+    left: 15px;
+    display: flex;
+}
+
+
+  

@@ -1,0 +1,8 @@
+{
+    "redirects":[
+       {
+          "source":"/src/components/SuccessPage/succes.html",
+          "destination":"/src/components/SuccessPage/succes.html"
+       }
+    ]
+ }
