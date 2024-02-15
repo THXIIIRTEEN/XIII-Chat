@@ -9,7 +9,7 @@ export default function Chat() {
 
     const [messageArray, setMessageArray] = useState([])
 
-    fetch('https://thxiii-messages.glitch.me/messages')
+    fetch('https://four-cut-night.glitch.me/messages')
         .then((response) => {
           return response.json();
         })
@@ -31,7 +31,7 @@ export default function Chat() {
             time: currentTime
         } 
 
-        fetch("https://thxiii-messages.glitch.me/messages", {
+        fetch("https://four-cut-night.glitch.me/messages", {
             method: "POST",
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify(message) 
