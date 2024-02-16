@@ -11,7 +11,8 @@ export default function ProfilePage() {
 
     const currentUsername = useStore(state => state.currentUser)
 
-    const [image, SetImage] = useState("https://avatars.mds.yandex.net/i?id=2f62fce40ccd2ce10fdc2850fe99a037_l-8257511-images-thumbs&ref=rim&n=13&w=1080&h=1080")
+    const [image, SetImage] = useState("https://abrakadabra.fun/uploads/posts/2021-12/1640528610_2-abrakadabra-fun-p-serii-chelovek-na-avu-2.jpg")
+    // const [image, SetImage] = useState("https://avatars.mds.yandex.net/i?id=2f62fce40ccd2ce10fdc2850fe99a037_l-8257511-images-thumbs&ref=rim&n=13&w=1080&h=1080")
 
     useImages(state => state.image = image)
  
@@ -47,7 +48,7 @@ export default function ProfilePage() {
 
             <div className="profile_card">
                 <div className="profile_banner"></div>
-                <div className="profileImage">
+                <div className="profileImage" style={{ background: 'url('+ image +')'}}>
                     <form id="ImageForm" className="ImageForm">
                         {/* <input id="file" name="file" onChange={(e) => ImageSet(e)} onClick={postImage} className="profile_input" type="file"/> */}
                     </form> 

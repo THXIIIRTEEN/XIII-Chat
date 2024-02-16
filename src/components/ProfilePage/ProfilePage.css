@@ -69,16 +69,16 @@
     border: solid 8px;
     border-color: var(--block-bg-color);
     position: relative;
-    background: url(./Profile.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
+    /* background: url(./Profile.svg); */
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
     transition: 0.4s;
     padding: 0%;
     display: flex;
     cursor: pointer;
 }
 
-.profileImage::before {
+/* .profileImage::before {
     content: " ";
     background: url(./Camera.svg);
     background-size: contain;
@@ -94,11 +94,11 @@
     opacity: 0%;
     transition: 0.4s;
     display: block;
-}
+} */
 
-.profileImage:hover::before {
+/* .profileImage:hover::before {
     opacity: 80%;
-}
+} */
 
 .profile_input {
     position: relative;
