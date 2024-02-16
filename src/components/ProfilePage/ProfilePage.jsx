@@ -25,6 +25,8 @@ export default function ProfilePage() {
         let image = document.getElementById("inpup").value
 
         SetImage(image)
+
+        document.getElementById("inpup").value = ""
     }
 
     return (
