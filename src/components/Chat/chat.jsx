@@ -15,7 +15,6 @@ export default function Chat() {
         })
         .then((data) => {
           setMessageArray(data)
-          window.scrollTo(0, document.body.scrollHeight)
         });
 
     function sendMessage(e) {
