@@ -2,14 +2,19 @@ import Styles from "./chat.module.css"
 import useStore from "../store";
 import Message from "../Message/Message";
 import { useState } from "react";
+import useImages from "../store-images";
 
 export default function Chat() {
 
     const currentUsername = useStore(state => state.currentUser)
 
+    const currentImage = useImages(state => state.image)
+
     const [messageArray, setMessageArray] = useState([])
 
-    fetch('https://thxiii-messages.glitch.me/messages')
+    console.log(currentImage)
+
+    fetch('https://xiii-chat-server.glitch.me/messages')
         .then((response) => {
           return response.json();
         })
@@ -28,10 +33,11 @@ export default function Chat() {
         let message = {
             username: currentUsername,
             message: messageInput.value,
-            time: currentTime
+            time: currentTime,
+            image: currentImage
         } 
 
-        fetch("https://thxiii-messages.glitch.me/messages", {
+        fetch("https://xiii-chat-server.glitch.me/messages", {
             method: "POST",
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify(message) 

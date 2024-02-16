@@ -2,44 +2,30 @@ import "./ProfilePage.css"
 import GradientButton from "../GradientButton/GradientButton"
 import { useNavigate } from "react-router-dom";
 import useStore from "../store";
+import useImages from "../store-images";
+import { useState } from "react";
 
 export default function ProfilePage() {
 
     const navigate = useNavigate();
 
     const currentUsername = useStore(state => state.currentUser)
+
+    const [image, SetImage] = useState("https://avatars.mds.yandex.net/i?id=2f62fce40ccd2ce10fdc2850fe99a037_l-8257511-images-thumbs&ref=rim&n=13&w=1080&h=1080")
+
+    useImages(state => state.image = image)
  
-    function postImage() {
-
-        const getInputs = document.getElementsByTagName("input")
-        const userData = [... getInputs]
-
-        let superData = []
-
-        userData.forEach((inputData) => {
-            superData.push(inputData.value)
-            
-    })   
-    }
-
     function Join() {
         navigate('/Chat')
     }
 
-    function ImageSet(e) {
-        let photo = e.target.files[0]
-        console.log(photo)
+    function sendImage(e) {
+        e.preventDefault()
 
-        // fetch("https://formcarry.com/s/qNIMVNEeg1d",  {method: "POST", headers: {'Content-Type': 'application/json'}, body: JSON.stringify(object),  
-        // }).then((response) => {
-        //     return response.json();
-        //     })
-        //     .then((data) => {
-        //     console.log(data);
-        //     });
+        let image = document.getElementById("inpup").value
 
-        
-    }    
+        SetImage(image)
+    }
 
     return (
         
@@ -61,9 +47,14 @@ export default function ProfilePage() {
                 <div className="profile_banner"></div>
                 <div className="profileImage">
                     <form id="ImageForm" className="ImageForm">
-                        <input id="file" name="file" onChange={(e) => ImageSet(e)} onClick={postImage} className="profile_input" type="file"/>
-                    </form>
+                        {/* <input id="file" name="file" onChange={(e) => ImageSet(e)} onClick={postImage} className="profile_input" type="file"/> */}
+                    </form> 
                 </div>
+                <form className="linkForm">
+                    <input id="inpup" type="text" placeholder="Enter link to your avatar image"/>
+                    <button className="imageSubmit" onClick={sendImage}>Send</button>
+                </form>
+
                 <h4>{currentUsername}</h4>
                 <p>What`s on your mind today, {currentUsername}?</p>
                 <div className="profile_buttons">
