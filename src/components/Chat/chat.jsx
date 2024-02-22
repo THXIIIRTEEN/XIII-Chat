@@ -3,6 +3,7 @@ import useStore from "../store";
 import Message from "../Message/Message";
 import { useState } from "react";
 import useImages from "../store-images";
+import { useWebSocket } from 'react-use-websocket';
 
 export default function Chat() {
 
@@ -14,7 +15,7 @@ export default function Chat() {
 
     console.log(currentImage)
 
-    fetch('https://xiii-chat-server.glitch.me/messages')
+    fetch('https://thxiii-messages.glitch.me/messages')
         .then((response) => {
           return response.json();
         })
@@ -37,7 +38,7 @@ export default function Chat() {
             image: currentImage
         } 
 
-        fetch("https://xiii-chat-server.glitch.me/messages", {
+        fetch("https://thxiii-messages.glitch.me/messages", {
             method: "POST",
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify(message) 
