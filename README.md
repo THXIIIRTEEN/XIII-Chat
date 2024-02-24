@@ -1,5 +1,5 @@
 
-<h1>Многостраничный Сайт</h1>
+<h1>Форма регистрации и чат</h1>
 
 <a href="https://xiii-chat.vercel.app/">Simple Demo</a>
 
